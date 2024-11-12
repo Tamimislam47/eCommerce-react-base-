@@ -1,0 +1,88 @@
+/* Centering and Styling for Play Button */
+.video-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 44px;
+  padding: 18px 20px 18px 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent; /* Ensures only the icon is clickable */
+}
+
+/* Pulse Effect */
+.video-play-button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: #ff4c60;
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite;
+  z-index: 0;
+}
+
+.video-play-button:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: #ff4c60;
+  border-radius: 50%;
+  transition: all 200ms;
+  z-index: 1;
+}
+
+.video-play-button:hover:after {
+  background-color: #f1ad34;
+}
+
+/* Play Icon */
+.video-play-button span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-left: 32px solid #fff;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+}
+
+/* Pulse Animation */
+@keyframes pulse-border {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Entrance Animation for Play Button */
+.video-play-button {
+  animation: scale-up-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5) translate(-50%, -50%);
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
