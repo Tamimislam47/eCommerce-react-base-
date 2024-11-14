@@ -10,11 +10,16 @@ export default function Blog() {
       <h1 className="text-5xl font-extrabold">Latest Blog</h1>
       <p>There are many variations of passages of Lorem Ipsum available</p>
 
-      <div className="grid w-full gap-3 lg:min-h-[50vh] lg:grid-cols-2">
-        <LeftSide image={blogimg} heading="10 Quick Tips About Smart Product" />
+      <div className="grid w-full gap-3 lg:grid-cols-2">
+        <LeftSide
+          img={blogimg}
+          title="10 Principles of Psychology You Can Use to Improve Your Smart Product"
+          summary="Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore in smart"
+        />
         <RightSide
-          image={rblogimg}
-          heading="5 Real-Life Lessons About Smart Product"
+          title="Understanding Cognitive Load in UI/UX Design"
+          img={rblogimg}
+          summary="Discover ways to manage cognitive load in design by simplifying choices and using familiar elements to prevent"
         />
       </div>
     </div>

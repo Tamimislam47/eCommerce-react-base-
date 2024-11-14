@@ -7,6 +7,7 @@ import Contact from "../Pages/Contact/Contact";
 import AboutPage from "../Pages/About/AboutPage";
 import Products from "../Pages/Product/Products";
 import SingalProduct from "../Pages/Product/SingalProduct";
+import SinglePageBlog from "../Pages/Blog/SingleBlog/SinglePageBlog";
 import Blogpage from "../Pages/Blog/Blogpage";
 
 const router = createBrowserRouter([
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/blogpage/:id",
-    element: <SingalProduct></SingalProduct>,
+    element: <SinglePageBlog></SinglePageBlog>,
   },
 ]);
 

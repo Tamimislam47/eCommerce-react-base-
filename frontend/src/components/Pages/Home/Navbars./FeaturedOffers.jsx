@@ -22,7 +22,7 @@ export default function FeaturedOffers() {
             style={{
               backgroundImage: `url(${product1})`,
             }}
-            className="h-[45%] w-full rounded-xl border-2 border-gray-500 bg-cover bg-center xl:h-full xl:w-1/2"
+            className="h-[45%] w-full rounded-xl border-2 border-gray-300 bg-cover bg-center xl:h-full xl:w-1/2"
           >
             <div className="textContainer flex h-[80%] w-full flex-col items-center justify-between">
               <div className="uptxt mt-[20px] flex flex-col justify-around gap-3">

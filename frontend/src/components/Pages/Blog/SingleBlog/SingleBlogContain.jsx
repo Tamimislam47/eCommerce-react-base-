@@ -1,43 +1,35 @@
 import React from "react";
-import Blogimg from "@images/BlogImg.webp";
 import { SlCalender } from "react-icons/sl";
 import { IoPersonSharp } from "react-icons/io5";
-import Container from "./Container";
 
-export default function SinglePageBlog({ blogData }) {
-  console.log(blogData);
+import { useLocation } from "react-router-dom";
+
+export default function SingleBlogContain({ ...props }) {
+  const { img, date, author, title } = props.blog || {};
+  console.log(props);
 
   return (
     <div className="flex w-full flex-col items-center p-3 sm:w-[80%] lg:w-[70%]">
       <div className="flex w-full flex-col items-center justify-center gap-5 sm:w-[90%] xl:w-[65%]">
-        <div
-          style={{
-            backgroundImage: `url(${blogData.image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-          className="h-[40vh] w-full rounded-xl sm:w-[90%] xl:w-[80%]"
-        ></div>
+        <div className="h-[40vh] w-full rounded-xl sm:w-[90%] xl:w-[80%]">
+          <img src={img} className="h-full w-full" alt="" />
+        </div>
         <div className="flex w-full flex-col gap-5">
           <div className="flex w-full items-center gap-5">
             <div className="flex items-center gap-2">
               <span className="text-[20px] text-blue">
                 <SlCalender />
               </span>
-              <span className="text-[12px] sm:text-[17px]">27, Jun 2025</span>
+              <span className="text-[12px] sm:text-[17px]"> {date} </span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-[20px] text-blue">
                 <IoPersonSharp />
               </span>
-              <span className="text-[12px] sm:text-[17px]">Oaklee Odom</span>
+              <span className="text-[12px] sm:text-[17px]"> {author} </span>
             </div>
           </div>
-          <h1 className="text-3xl font-extrabold">
-            10 Principles of Psychology You Can Use to Improve Your Smart
-            Product
-          </h1>
+          <h1 className="text-3xl font-extrabold">{title}</h1>
           <p className="text-xl">
             Psychology principles can significantly enhance the design,
             functionality, and user experience of smart products, making them

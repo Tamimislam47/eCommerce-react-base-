@@ -8,7 +8,7 @@ export default function FeatureProductCards(props) {
   const handleMouseLeave = () => setShow(false);
 
   return (
-    <div className="flex h-[45%] rounded-lg  w-full border-2 border-gray-500 xl:h-1/2">
+    <div className="flex h-[45%] rounded-lg  w-full border-2 border-gray-300 xl:h-1/2">
       <div className="h-full w-1/2 object-cover ">
         <img src={props.src} className="h-full w-full" alt="" />
       </div>

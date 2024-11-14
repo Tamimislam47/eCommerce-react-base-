@@ -3,6 +3,7 @@ import Headers from "../Home/Navbars./Headers";
 import BackGroundBanner from "../../ReuseableComponents/BackGroundBanner";
 import Footer from "../Home/Navbars./Footer/Footer";
 import ContactForm from "./ContactForm";
+import GoogleMap from "./GoogleMap";
 
 export default function Contact() {
   return (
@@ -10,6 +11,7 @@ export default function Contact() {
       <Headers />
       <BackGroundBanner />
       <ContactForm />
+      <GoogleMap />
       <Footer />
     </div>
   );

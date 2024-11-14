@@ -6,6 +6,7 @@ export default function OneBlogCard() {
   return (
     <div className="grid w-full grid-cols-1 sm:w-[80%] lg:w-[70%]">
       <BlogCard image={blogimg} heading={"kdjfkdjk"} />
+      <BlogCard image={blogimg} heading={"kdjfkdjk"} />
     </div>
   );
 }
