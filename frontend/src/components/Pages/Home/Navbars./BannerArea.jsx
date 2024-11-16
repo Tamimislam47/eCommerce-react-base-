@@ -14,15 +14,20 @@ export default function BannerArea() {
           style={{ backgroundImage: `url(${watch})` }}
           className="image flex h-[60%] w-full items-center justify-center bg-cover"
         >
-          {/* <img className="h-full w-full" src={watch} alt="" /> */}
         </div>
         <div className="flex h-[35%] flex-col justify-center p-[50px] text-2xl font-extrabold text-[#999DA0] sm:text-4xl">
           <p>Smart Watch For</p>
           <p>Your Hand</p>
           <div className="flex justify-between">
             <p>From $29.00</p>
-            <Button className="rounded-full bg-blue p-3 text-white">
-              <Link to={"/products"}> {<FaArrowRight />} </Link>
+            <Button className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4">
+              <Link to={"/products"}>
+                {
+                  <span className="text-xl">
+                    <FaArrowRight />
+                  </span>
+                }{" "}
+              </Link>
             </Button>
           </div>
         </div>
@@ -35,7 +40,7 @@ export default function BannerArea() {
         >
           <h1 className="text-[#999DA0] sm:text-4xl">Headphones</h1>
           <p className="text-black sm:text-2xl">From $95.00</p>
-          <Button className="w-[15%] rounded-full bg-blue p-2 text-white">
+          <Button className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl">
             <Link to={"/products"}> {<FaArrowRight />} </Link>
           </Button>
         </div>
@@ -45,7 +50,7 @@ export default function BannerArea() {
         >
           <h1 className="text-[#999DA0] sm:text-4xl">Smartphone</h1>
           <p className="text-black sm:text-2xl">From $69.00</p>
-          <Button className="w-[15%] rounded-full bg-blue p-2 text-white">
+          <Button className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl">
             <Link to={"/products"}> {<FaArrowRight />} </Link>
           </Button>
         </div>

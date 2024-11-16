@@ -8,8 +8,9 @@ export default function Button({
   text,
   ...rest
 }) {
+
   return (
-    <button onClick={onClick} className={`${className}`} {...rest}>
+    <button onClick={() => onClick()} className={`${className} `} {...rest}>
       <span className="text-center text-white">{text || icon || children}</span>
     </button>
   );

@@ -3,15 +3,12 @@ import Form from "../../ReuseableComponents/Form";
 import Input from "../../ReuseableComponents/Input";
 import Button from "../../ReuseableComponents/Button";
 import FormController from "../../../Controllers/FormController";
-import { IoHomeOutline } from "react-icons/io5";
-import { FaPhoneVolume } from "react-icons/fa6";
-import { TfiEmail } from "react-icons/tfi";
+
 
 export default function ContactForm() {
   const { handleSubmit } = FormController();
   const submitFormHandler = (e) => {
     e.preventDefault();
-    console.log(e);
 
     e.target.reset();
   };

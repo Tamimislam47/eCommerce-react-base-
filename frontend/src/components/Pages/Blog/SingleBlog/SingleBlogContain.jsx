@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 
 export default function SingleBlogContain({ ...props }) {
   const { img, date, author, title } = props.blog || {};
-  console.log(props);
 
   return (
     <div className="flex w-full flex-col items-center p-3 sm:w-[80%] lg:w-[70%]">

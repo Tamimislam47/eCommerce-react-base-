@@ -1,0 +1,37 @@
+[
+  {
+    "userId": 1,
+    "userName": "Alice",
+    "userImg": "https://htmldemo.net/hmart/hmart/assets/images/blog-image/comment-img-1.webp", 
+    "userComment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp labore et dol magna aliqua. Ut enim ad minim veniam.",
+    "Date": "2024-11-14T10:15:30Z"
+  },
+  {
+    "userId": 2,
+    "userName": "Bob",
+    "userImg": "https://htmldemo.net/hmart/hmart/assets/images/blog-image/comment-img-2.webp", 
+    "userComment": "Thanks for sharing this information. Very helpful!",
+    "Date": "2024-11-14T11:20:45Z"
+  },
+  {
+    "userId": 3,
+    "userName": "Charlie",
+    "userImg": "https://htmldemo.net/hmart/hmart/assets/images/blog-image/comment-img-3.webp",
+    "userComment": "I found this post insightful. Keep up the good work!",
+    "Date": "2024-11-14T12:35:50Z"
+  },
+  {
+    "userId": 4,
+    "userName": "David",
+    "userImg": "https://example.com/images/user4.jpg",
+    "userComment": "This really clarified a lot of questions I had. Thanks!",
+    "Date": "2024-11-14T13:45:10Z"
+  },
+  {
+    "userId": 5,
+    "userName": "Eve",
+    "userImg": "https://example.com/images/user5.jpg",
+    "userComment": "Interesting read! Looking forward to more posts like this.",
+    "Date": "2024-11-14T14:05:20Z"
+  }
+]

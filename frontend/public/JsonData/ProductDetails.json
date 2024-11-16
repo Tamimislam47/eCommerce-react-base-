@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "NewPrice": 299,
+    "OldPrice": 399,
+    "type": "Electronics",
+    "productName": "Wireless Headphones",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 2,
+    "NewPrice": 199,
+    "OldPrice": 299,
+    "type": "Home Appliance",
+    "productName": "Air Fryer",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 3,
+    "NewPrice": 499,
+    "OldPrice": 599,
+    "type": "Smartphone",
+    "productName": "Smartphone X",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 4,
+    "NewPrice": 1299,
+    "OldPrice": 1499,
+    "type": "Laptop",
+    "productName": "Gaming Laptop Z",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 5,
+    "NewPrice": 99,
+    "OldPrice": 149,
+    "type": "Kitchen",
+    "productName": "Blender",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 6,
+    "NewPrice": 59,
+    "OldPrice": 89,
+    "type": "Accessories",
+    "productName": "Bluetooth Speaker",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 7,
+    "NewPrice": 399,
+    "OldPrice": 499,
+    "type": "Fitness",
+    "productName": "Treadmill",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 8,
+    "NewPrice": 249,
+    "OldPrice": 349,
+    "type": "Office",
+    "productName": "Ergonomic Chair",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 9,
+    "NewPrice": 39,
+    "OldPrice": 59,
+    "type": "Stationery",
+    "productName": "Smart Notebook",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  },
+  {
+    "id": 10,
+    "NewPrice": 799,
+    "OldPrice": 999,
+    "type": "Appliance",
+    "productName": "Refrigerator",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+  }
+]

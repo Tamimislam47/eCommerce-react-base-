@@ -1,5 +1,5 @@
 import BackGroundBanner from "../../ReuseableComponents/BackGroundBanner";
-import Pagination from "../../ReuseableComponents/PaginationDesign";
+import Pagination from "../../ReuseableComponents/Pagination/PaginationDesign";
 import Loader from "../../ReuseableComponents/Loader";
 import Footer from "../Home/Navbars./Footer/Footer";
 import React, { useEffect, useState } from "react";
@@ -31,19 +31,20 @@ export default function Blogpage() {
     getBlogData();
   }, []);
 
+  //* pagination page change
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = blogData.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 pl-3 pr-3">
+    <div className="flex flex-col items-center justify-center gap-4">
       {loading ? (
         <Loader />
       ) : (
         <>
           <Headers />
           <BackGroundBanner />
-          <RowsBlogData  blogData={currentPosts} />
+          <RowsBlogData blogData={currentPosts} />
           <div className="flex w-full justify-end pr-20">
             <Pagination
               setCurrentPage={setCurrentPage}

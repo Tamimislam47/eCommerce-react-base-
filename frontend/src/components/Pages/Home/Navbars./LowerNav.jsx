@@ -1,17 +1,44 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaRegHeart } from "react-icons/fa6";
-import { LuShoppingBag } from "react-icons/lu";
 import { FaSearch } from "react-icons/fa";
 import Button from "../../../ReuseableComponents/Button";
+import { LuShoppingBag } from "react-icons/lu";
+
 import { Link } from "react-router-dom";
 import { IoMenuSharp } from "react-icons/io5";
-import SideSlider from "../../../ReuseableComponents/SideSlider";
+import LeftSideSlider from "../../../ReuseableComponents/SideSilder/LeftSideSlider";
+import RightSideSlider from "../../../ReuseableComponents/SideSilder/RightSideSlider";
+import { productContext } from "../../../../ContextApi/ProductProvider";
 
 export default function LowerNav() {
-  const [isOpen, setIsOpen] = useState(false);
+  const { productDetails } = useContext(productContext);
+  const [itemDetail, setItemDetail] = useState([]);
+  
+  // State to keep track of previous and current selected product
+  const [previousProduct, setPreviousProduct] = useState(null);
+  const [currentProduct, setCurrentProduct] = useState(null);
 
+  //* SideSlider State
+  const [isOpen, setIsOpen] = useState(false);
+  const [rightsideisOpen, setRightsideIsOpen] = useState(false);
+
+  //* LeftSide Func
   const openSidebar = () => setIsOpen(true);
   const closeSidebar = () => setIsOpen(false);
+
+  //* RightsideSlider Func
+  const rightopenSidebar = () => {
+    // Store the current product as the previous one before updating
+    setPreviousProduct(currentProduct);
+    setCurrentProduct(productDetails); // Set the current product
+    setItemDetail((prev) => [...prev, productDetails]);
+    setRightsideIsOpen(true);
+  };
+
+  const rightcloseSidebar = () => setRightsideIsOpen(false);
+
+  console.log("Previous Product:", previousProduct);
+  console.log("Current Product:", currentProduct);
 
   return (
     <nav className="flex h-[180px] w-full flex-col items-center p-3 sm:w-[80%] lg:w-[70%]">
@@ -29,8 +56,25 @@ export default function LowerNav() {
           </Button>
         </div>
         <div className="icons flex items-center gap-3 text-2xl">
-          <FaRegHeart />
-          <LuShoppingBag />
+          <span className="relative hover:cursor-pointer">
+            <span className="hover:text-blue">
+              <FaRegHeart />
+            </span>
+            <span className="absolute right-[-10px] top-[-8px] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-green-500 text-[13px]">
+              01
+            </span>
+          </span>
+          <span className="icons relative flex items-center text-2xl hover:cursor-pointer">
+            <Button
+              onClick={rightopenSidebar}
+              className="hover:text-blue"
+            >
+              <LuShoppingBag />
+            </Button>
+            <span className="absolute right-[-10px] top-[-8px] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-green-500 text-[13px]">
+              01
+            </span>
+          </span>
           <Button className="block sm:hidden" onClick={openSidebar}>
             <IoMenuSharp />
           </Button>
@@ -49,10 +93,10 @@ export default function LowerNav() {
             <Link to={"/products"}>Products</Link>
           </li>
           <li className="hover:cursor-pointer">
-            <button onClick={() => console.log("dlkfjdlkjf")}>Shop</button>
+            <button>Shop</button>
           </li>
           <li className="hover:cursor-pointer">
-            <Link to={'/blogpage'}  >Blog</Link>
+            <Link to={"/blogpage"}>Blog</Link>
           </li>
           <li className="hover:cursor-pointer">
             <Link to={"/contact"}>Contact</Link>
@@ -61,34 +105,17 @@ export default function LowerNav() {
       </div>
 
       {/* Sidebar with fixed width and height */}
-      <SideSlider isOpen={isOpen}>
-        <Button
-          onClick={closeSidebar}
-          className="w-full bg-gray-700 px-4 py-2 text-lg text-white hover:bg-gray-600"
-        >
-          Close &times;
-        </Button>
-        <Link className="hover:bg-blue" to={"/"}>
-          Home
-        </Link>
+      <LeftSideSlider
+        isOpen={isOpen}
+        closeSidebar={closeSidebar}
+        width="250px"
+      ></LeftSideSlider>
 
-        <Link className="hover:bg-blue" to={"/about"}>
-          About
-        </Link>
-
-        <Link className="hover:bg-blue" to={"/products"}>
-          Products
-        </Link>
-        <Link className="hover:bg-blue" to={"/Shop"}>
-          Shop
-        </Link>
-        <Link className="hover:bg-blue" to={"/blogpage"}>
-          Blog
-        </Link>
-        <Link className="hover:bg-blue" to={"/contact"}>
-          Contact
-        </Link>
-      </SideSlider>
+      <RightSideSlider
+        rightopenSidebar={rightsideisOpen}
+        rightcloseSidebar={rightcloseSidebar}
+        width="100vw"
+      ></RightSideSlider>
 
       <div className="mb-4 flex h-[40%] w-[100%] sm:hidden">
         <input className="h-full w-[85%] rounded-l-lg text-black" type="text" />
