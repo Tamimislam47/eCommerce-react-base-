@@ -3,17 +3,25 @@
     "id": 1,
     "NewPrice": 299,
     "OldPrice": 399,
-    "type": "Electronics",
-    "productName": "Wireless Headphones",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "type": "Audio Device",
+    "productName": "Wireless Earbuds",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "AUD-WE-001",
+    "Categories": ["Audio", "Gadgets"],
+    "Tags": ["wireless", "earbuds", "audio", "portable"],
+    "productDetails": "Compact and stylish wireless earbuds with superior sound quality and long battery life."
   },
   {
     "id": 2,
     "NewPrice": 199,
     "OldPrice": 299,
-    "type": "Home Appliance",
-    "productName": "Air Fryer",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "type": "Router",
+    "productName": "Pocket Router",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/2.webp",
+    "SKU": "NET-PR-002",
+    "Categories": ["Networking", "Portable Devices"],
+    "Tags": ["router", "internet", "portable", "wireless"],
+    "productDetails": "A compact pocket router providing seamless connectivity anywhere, anytime."
   },
   {
     "id": 3,
@@ -21,62 +29,94 @@
     "OldPrice": 599,
     "type": "Smartphone",
     "productName": "Smartphone X",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "MOB-SP-003",
+    "Categories": ["Mobile", "Smart Devices"],
+    "Tags": ["smartphone", "mobile", "technology"],
+    "productDetails": "A sleek and powerful smartphone with advanced features and stunning performance."
   },
   {
     "id": 4,
     "NewPrice": 1299,
     "OldPrice": 1499,
     "type": "Laptop",
-    "productName": "Gaming Laptop Z",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "productName": "Ultrabook Pro",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/5.webp",
+    "SKU": "LAP-UP-004",
+    "Categories": ["Computers", "Portable Devices"],
+    "Tags": ["laptop", "ultrabook", "performance"],
+    "productDetails": "A premium ultrabook with an ultra-thin design and top-notch specifications."
   },
   {
     "id": 5,
     "NewPrice": 99,
     "OldPrice": 149,
-    "type": "Kitchen",
-    "productName": "Blender",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "type": "Audio Device",
+    "productName": "Portable Music Box",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/6.webp",
+    "SKU": "AUD-PM-005",
+    "Categories": ["Audio", "Entertainment"],
+    "Tags": ["music box", "portable", "audio"],
+    "productDetails": "A portable music box with rich sound quality and durable build."
   },
   {
     "id": 6,
     "NewPrice": 59,
     "OldPrice": 89,
-    "type": "Accessories",
-    "productName": "Bluetooth Speaker",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "type": "Audio Device",
+    "productName": "Bluetooth Earphone",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "AUD-BE-006",
+    "Categories": ["Audio", "Wearables"],
+    "Tags": ["bluetooth", "earphone", "wireless"],
+    "productDetails": "A lightweight Bluetooth earphone offering clear sound and ergonomic fit."
   },
   {
     "id": 7,
     "NewPrice": 399,
     "OldPrice": 499,
-    "type": "Fitness",
-    "productName": "Treadmill",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "type": "Fitness Gadget",
+    "productName": "Smart Watch Pro",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/8.webp",
+    "SKU": "FIT-SW-007",
+    "Categories": ["Wearables", "Fitness"],
+    "Tags": ["smartwatch", "fitness", "wearable"],
+    "productDetails": "Track your fitness and stay connected with this high-performance smartwatch."
   },
   {
     "id": 8,
     "NewPrice": 249,
     "OldPrice": 349,
-    "type": "Office",
-    "productName": "Ergonomic Chair",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "type": "Office Gadget",
+    "productName": "Ergonomic Wireless Mouse",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "OFF-WM-008",
+    "Categories": ["Office", "Accessories"],
+    "Tags": ["mouse", "wireless", "ergonomic"],
+    "productDetails": "A comfortable and precise wireless mouse designed for extended use."
   },
   {
     "id": 9,
     "NewPrice": 39,
     "OldPrice": 59,
-    "type": "Stationery",
-    "productName": "Smart Notebook",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "type": "Stationery Gadget",
+    "productName": "Smart Pen",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "STAT-SP-009",
+    "Categories": ["Stationery", "Smart Devices"],
+    "Tags": ["smart pen", "writing", "stationery"],
+    "productDetails": "Capture your notes digitally with this advanced smart pen."
   },
   {
     "id": 10,
     "NewPrice": 799,
     "OldPrice": 999,
-    "type": "Appliance",
-    "productName": "Refrigerator",
-    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+    "type": "Home Appliance",
+    "productName": "Smart Air Purifier",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "HOME-AP-010",
+    "Categories": ["Home", "Smart Devices"],
+    "Tags": ["air purifier", "smart", "home"],
+    "productDetails": "Breathe cleaner air with this intelligent air purifier featuring advanced filters."
   }
 ]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userImg": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+    "userName": "Alice Johnson",
+    "review": "This app is absolutely amazing! It has transformed the way I manage my daily tasks and stay organized. The user interface is clean, intuitive, and easy to navigate, making it a pleasure to use. I especially love the notifications and reminders, which help me ensure I never miss anything important. Overall, this is a must-have tool for anyone looking to boost their productivity and keep track of their schedules effectively!"
+  },
+  {
+    "id": 2,
+    "userImg": "https://htmldemo.net/hmart/hmart/assets/images/review-image/2.png",
+    "userName": "Bob Smith",
+    "review": "Great app with a user-friendly interface. Highly recommended for anyone managing tasks."
+  },
+  {
+    "id": 3,
+    "userImg": "https://htmldemo.net/hmart/hmart/assets/images/review-image/1.png",
+    "userName": "Charlie Brown",
+    "review": "Good app overall, but I’d love to see more customization options in the future."
+  }
+]
