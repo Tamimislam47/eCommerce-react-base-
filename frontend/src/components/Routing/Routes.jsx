@@ -1,14 +1,15 @@
-import * as React from "react";
-import { createBrowserRouter } from "react-router-dom";
-import App from "../../App";
-import SignUp from "../Pages/Sign/SignUp";
-import Signin from "../Pages/Sign/SignIn";
-import Contact from "../Pages/Contact/Contact";
-import AboutPage from "../Pages/About/AboutPage";
-import Products from "../Pages/Product/Products";
-import SingalProduct from "../Pages/Product/SingalProduct";
 import SinglePageBlog from "../Pages/Blog/SingleBlog/SinglePageBlog";
+import SingalProduct from "../Pages/Shop/Singlepage/SingalProduct";
+import { createBrowserRouter } from "react-router-dom";
+import AboutPage from "../Pages/About/AboutPage";
+import Contact from "../Pages/Contact/Contact";
 import Blogpage from "../Pages/Blog/Blogpage";
+import Products from "../Pages/Shop/Products";
+import Signin from "../Pages/Sign/SignIn";
+import SignUp from "../Pages/Sign/SignUp";
+import MenubarSlider from "../ReuseableComponents/SideSilder/MenubarSlider";
+import * as React from "react";
+import App from "../../App";
 
 const router = createBrowserRouter([
   {
@@ -35,10 +36,7 @@ const router = createBrowserRouter([
     path: "/products",
     element: <Products></Products>,
   },
-  {
-    path: "/products",
-    element: <Products></Products>,
-  },
+
   {
     path: "/products/:id",
     element: <SingalProduct></SingalProduct>,
@@ -51,6 +49,7 @@ const router = createBrowserRouter([
     path: "/blogpage/:id",
     element: <SinglePageBlog></SinglePageBlog>,
   },
+
 ]);
 
 export default router;

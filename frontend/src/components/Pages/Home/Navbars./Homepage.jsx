@@ -5,7 +5,7 @@ import SmartFashion from "./SmartFashion";
 import ProductsRow from "./ProductsRow";
 import BannerArea from "./BannerArea";
 import Footer from "./Footer/Footer";
-import Headers from "./Headers";
+import Headers from "../Header/Headers";
 import Banner from "./Banner";
 import React from "react";
 

@@ -4,7 +4,6 @@ import Airdot from "@images/airdot.webp";
 import phone from "@images/phone.webp";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Button from "../../../ReuseableComponents/Button";
 
 export default function BannerArea() {
   return (
@@ -13,22 +12,18 @@ export default function BannerArea() {
         <div
           style={{ backgroundImage: `url(${watch})` }}
           className="image flex h-[60%] w-full items-center justify-center bg-cover"
-        >
-        </div>
+        ></div>
         <div className="flex h-[35%] flex-col justify-center p-[50px] text-2xl font-extrabold text-[#999DA0] sm:text-4xl">
           <p>Smart Watch For</p>
           <p>Your Hand</p>
           <div className="flex justify-between">
             <p>From $29.00</p>
-            <Button className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4">
-              <Link to={"/products"}>
-                {
-                  <span className="text-xl">
-                    <FaArrowRight />
-                  </span>
-                }{" "}
-              </Link>
-            </Button>
+            <Link
+              to={"/products"}
+              className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl"
+            >
+              <FaArrowRight />
+            </Link>
           </div>
         </div>
       </div>
@@ -40,9 +35,12 @@ export default function BannerArea() {
         >
           <h1 className="text-[#999DA0] sm:text-4xl">Headphones</h1>
           <p className="text-black sm:text-2xl">From $95.00</p>
-          <Button className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl">
-            <Link to={"/products"}> {<FaArrowRight />} </Link>
-          </Button>
+          <Link
+            to={"/products"}
+            className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl"
+          >
+            <FaArrowRight />
+          </Link>
         </div>
         <div
           style={{ backgroundImage: `url(${phone})` }}
@@ -50,9 +48,12 @@ export default function BannerArea() {
         >
           <h1 className="text-[#999DA0] sm:text-4xl">Smartphone</h1>
           <p className="text-black sm:text-2xl">From $69.00</p>
-          <Button className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl">
-            <Link to={"/products"}> {<FaArrowRight />} </Link>
-          </Button>
+          <Link
+            to={"/products"}
+            className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl"
+          >
+            <FaArrowRight />
+          </Link>
         </div>
       </div>
     </div>

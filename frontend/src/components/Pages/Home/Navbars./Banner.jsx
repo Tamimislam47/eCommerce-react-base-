@@ -15,7 +15,7 @@ export default function Banner() {
   return (
     <div
       style={{
-        height: "calc(100vh - 180px)",
+        height: "calc(100vh - 200px)",
         backgroundImage: `url(${bannerImg})`,
       }}
       className="bannerContainer relative flex w-screen flex-col items-center justify-center bg-cover text-white"

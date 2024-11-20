@@ -1,5 +1,6 @@
 import AuthProviderContext from "./ContextApi/AuthProvider.jsx";
 import ProductProvider from "./ContextApi/ProductProvider.jsx";
+import ProductDataProvider from "./ContextApi/ProductDataProvider.jsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
@@ -10,11 +11,13 @@ import { RouterProvider } from "react-router-dom";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProviderContext>
-      <ProductProvider>
-        <RouterProvider router={router}>
-          <App />
-        </RouterProvider>
-      </ProductProvider>
+      <ProductDataProvider>
+        <ProductProvider>
+          <RouterProvider router={router}>
+            <App />
+          </RouterProvider>
+        </ProductProvider>
+      </ProductDataProvider>
     </AuthProviderContext>
   </StrictMode>,
 );

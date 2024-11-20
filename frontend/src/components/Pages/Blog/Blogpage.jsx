@@ -1,9 +1,9 @@
-import BackGroundBanner from "../../ReuseableComponents/BackGroundBanner";
+import BackGroundBanner from "../../ReuseableComponents/Tools/BackGroundBanner";
 import Pagination from "../../ReuseableComponents/Pagination/PaginationDesign";
 import Loader from "../../ReuseableComponents/Loader";
 import Footer from "../Home/Navbars./Footer/Footer";
 import React, { useEffect, useState } from "react";
-import Headers from "../Home/Navbars./Headers";
+import Headers from "../Home/Header/Headers";
 import RowsBlogData from "./RowsBlogData";
 
 export default function Blogpage() {
@@ -37,7 +37,7 @@ export default function Blogpage() {
   const currentPosts = blogData.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <div className="flex flex-col items-center justify-center">
       {loading ? (
         <Loader />
       ) : (

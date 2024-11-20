@@ -5,42 +5,10 @@ import { LuShoppingBag } from "react-icons/lu";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import React, { useContext } from "react";
-import image1 from "@images/image1.webp";
-import { useNavigate } from "react-router-dom";
-
-const btns = [
-  {
-    id: 1,
-    text: "Add to chart",
-    icon: <LuShoppingBag />,
-  },
-  {
-    id: 2,
-    text: "Wishlist",
-    icon: <FaRegHeart />,
-  },
-  {
-    id: 3,
-    text: "Quick View",
-    icon: <IoEyeOutline />,
-  },
-  {
-    id: 4,
-    text: "Compare",
-    icon: <FaArrowsRotate />,
-  },
-];
 
 export default function ProdectCards(props) {
   const { id, NewPrice, OldPrice, productImg, productName } = props.item;
-  const { setproductDetails } = useContext(productContext);
-
-  const cartHandler = () => {
-    setproductDetails(props.item);
-  };
-  const FavourateHandler = () => {
-    console.log("dkjfdlkdj");
-  };
+  const { addProduct, addFavitems } = useContext(productContext);
 
   return (
     <div className="card relative h-full w-full border-[3px] border-[#E1E1E1] p-3">
@@ -68,13 +36,13 @@ export default function ProdectCards(props) {
         {/* Action Buttons */}
         <div className="button flex h-[30%] w-full items-center justify-around gap-2">
           <Button
-            onClick={cartHandler}
+            onClick={() => addProduct(props.item)}
             className="bg-gray-500 p-3 hover:bg-blue"
           >
             <LuShoppingBag />
           </Button>
           <Button
-            onClick={FavourateHandler}
+            onClick={() => addFavitems(props.item)}
             className="bg-gray-500 p-3 hover:bg-blue"
           >
             <FaRegHeart />
