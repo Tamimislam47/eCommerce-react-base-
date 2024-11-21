@@ -7,7 +7,7 @@ import Blogpage from "../Pages/Blog/Blogpage";
 import Products from "../Pages/Shop/Products";
 import Signin from "../Pages/Sign/SignIn";
 import SignUp from "../Pages/Sign/SignUp";
-import MenubarSlider from "../ReuseableComponents/SideSilder/MenubarSlider";
+import MyCart from "../Pages/Order/MyCart";
 import * as React from "react";
 import App from "../../App";
 
@@ -49,7 +49,10 @@ const router = createBrowserRouter([
     path: "/blogpage/:id",
     element: <SinglePageBlog></SinglePageBlog>,
   },
-
+  {
+    path: "/mycart",
+    element: <MyCart></MyCart>,
+  },
 ]);
 
 export default router;

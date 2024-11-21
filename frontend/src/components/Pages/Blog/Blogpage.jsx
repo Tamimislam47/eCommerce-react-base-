@@ -1,7 +1,7 @@
 import BackGroundBanner from "../../ReuseableComponents/Tools/BackGroundBanner";
 import Pagination from "../../ReuseableComponents/Pagination/PaginationDesign";
 import Loader from "../../ReuseableComponents/Loader";
-import Footer from "../Home/Navbars./Footer/Footer";
+import Footer from "../Home/Footer/Footer";
 import React, { useEffect, useState } from "react";
 import Headers from "../Home/Header/Headers";
 import RowsBlogData from "./RowsBlogData";

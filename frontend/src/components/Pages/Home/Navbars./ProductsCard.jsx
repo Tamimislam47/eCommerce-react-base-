@@ -7,8 +7,10 @@ import { FaRegHeart } from "react-icons/fa6";
 import React, { useContext } from "react";
 
 export default function ProdectCards(props) {
-  const { id, NewPrice, OldPrice, productImg, productName } = props.item;
+  const { NewPrice, OldPrice, productImg, productName } = props.item;
   const { addProduct, addFavitems } = useContext(productContext);
+
+  const Sale = ((NewPrice - OldPrice) / OldPrice) * 100;
 
   return (
     <div className="card relative h-full w-full border-[3px] border-[#E1E1E1] p-3">
@@ -17,8 +19,12 @@ export default function ProdectCards(props) {
         <Button className="w-[30%] rounded-lg bg-blue p-1 font-bold text-white">
           New
         </Button>
-        <Button className="w-[30%] rounded-lg bg-black p-1 font-bold text-white">
-          Sale
+        <Button
+          className={`w-[30%] rounded-lg bg-black p-1 font-bold text-white ${NewPrice === OldPrice ? "hidden" : "block"} `}
+        >
+          {NewPrice === OldPrice
+            ? `$ ${NewPrice}`
+            : `$ ${Sale.toFixed(2)}% off`}
         </Button>
       </div>
 
@@ -31,7 +37,9 @@ export default function ProdectCards(props) {
       <div className="text flex h-[40%] flex-col items-center justify-around gap-2 p-3">
         <p className="text-[#707070]">Accessories</p>
         <p className="font-bold">{productName}</p>
-        <p className="text-[#707070]">$ {NewPrice}</p>
+        <p className="text-[#707070]">
+          ${NewPrice !== OldPrice ? <span>{OldPrice}</span> : NewPrice}
+        </p>
 
         {/* Action Buttons */}
         <div className="button flex h-[30%] w-full items-center justify-around gap-2">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomerRating from "../../../ReuseableComponents/Tools/MiddiumCustomerRating";
 import IncDecButton from "../../../ReuseableComponents/Tools/IncDecButton";
 import Button from "../../../ReuseableComponents/Button";
@@ -7,9 +7,16 @@ import { LuShoppingBag } from "react-icons/lu";
 import TabContent from "../../../ReuseableComponents/TabcontentFolder/TabContent";
 
 export default function Contextside(props) {
+  const [clicks, setClicks] = useState(0); // Initialize clicks with 0
+
   const { id, NewPrice, OldPrice, productName, SKU, Tags, productDetails } =
     props.itemDetails;
-  // console.log(props.itemDetails);
+
+  const handleClicksChange = (newClicks) => {
+    setClicks(newClicks); // Update the clicks state
+  };
+
+
   return (
     <div className="flex flex-col gap-5 p-5">
       <div>
@@ -30,7 +37,9 @@ export default function Contextside(props) {
       </div>
 
       <div className="flex justify-between p-3 pl-0 sm:w-[80%]">
-        <IncDecButton />
+        {/* Pass the clicks and handler as props to IncDecButton */}
+        <IncDecButton clicks={clicks} onClicksChange={handleClicksChange} />
+
         <Button className="w-[40%] bg-blue sm:pl-8 sm:pr-8">
           <h5>Add To Cart</h5>
         </Button>

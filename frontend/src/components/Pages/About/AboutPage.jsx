@@ -4,7 +4,7 @@ import Headers from "../Home/Header/Headers";
 import ClientFeedback from "../Home/Navbars./ClientFeedback";
 import BlogCards from "../Home/Navbars./BlogCards/BlogCard";
 import BackGroundBanner from "../../ReuseableComponents/Tools/BackGroundBanner";
-import Footer from "../Home/Navbars./Footer/Footer";
+import Footer from "../Home/Footer/Footer";
 import Description from "./Description";
 import Members from "./Members";
 import Services from "./Services";

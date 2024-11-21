@@ -4,7 +4,7 @@ import BackGroundBanner from "../../ReuseableComponents/Tools/BackGroundBanner";
 import AllProduct from "./ProductRowsStyle/AllProduct";
 import { useFetchData } from "../../../ContextApi/ProductDataProvider";
 import Pagination from "../../ReuseableComponents/Pagination/PaginationDesign";
-import Footer from "../Home/Navbars./Footer/Footer";
+import Footer from "../Home/Footer/Footer";
 export default function Products() {
   const { data } = useFetchData();
 

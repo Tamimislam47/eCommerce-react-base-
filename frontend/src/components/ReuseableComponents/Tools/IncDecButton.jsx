@@ -1,43 +1,45 @@
 import React, { Component } from "react";
 
 class IncDecButton extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicks: 0,
-      show: true,
-    };
-  }
-
   IncrementItem = () => {
-    this.setState({ clicks: this.state.clicks + 1 });
+    // Pass just the updated clicks value to the parent
+    this.props.onClicksChange(this.props.clicks + 1);
   };
+
   DecreaseItem = () => {
-    this.setState({
-      clicks: this.state.clicks < 0 ? 0 : this.state.clicks - 1,
-    });
+    // Ensure clicks don't go below 0
+    this.props.onClicksChange(
+      this.props.clicks > 0 ? this.props.clicks - 1 : 0,
+    );
   };
 
   render() {
+    const { w } = this.props;
+
     return (
-      <div className="flex w-[20%] items-center justify-center gap-3 bg-[#6B7280] text-white">
-        <button className="w-[50%] font-bold" onClick={this.IncrementItem}>
+      <div
+        className={`flex w-full items-center justify-center gap-3 border-2 border-black lg:w-[50%] ${w} `}
+      >
+        <button
+          className="w-[50%] border-2 font-bold"
+          onClick={this.IncrementItem}
+        >
           +
         </button>
         <span>
-          {" "}
-          {this.state.show ? (
-            <h4>{this.state.clicks > 0 ? this.state.clicks : "0"}</h4>
-          ) : (
-            ""
-          )}
+          <h4>{this.props.clicks > 0 ? this.props.clicks : "0"}</h4>
         </span>
-        <button className="w-[50%] font-bold" onClick={this.DecreaseItem}>
+        <button
+          className="w-[50%] border-2 font-bold"
+          onClick={this.DecreaseItem}
+        >
           -
         </button>
       </div>
     );
   }
 }
+
+//bg-[#6B7280]
 
 export default IncDecButton;

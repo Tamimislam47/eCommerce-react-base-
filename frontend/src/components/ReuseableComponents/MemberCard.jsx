@@ -1,7 +1,4 @@
 import React from "react";
-import memberImg1 from "@images/member1.webp";
-import memberImg2 from "@images/member2.webp";
-import memberImg3 from "@images/member3.webp";
 
 export default function MemberCard({ img, ...rest }) {
   return (

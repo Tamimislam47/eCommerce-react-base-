@@ -1,7 +1,7 @@
 import React from "react";
 import Headers from "../Home/Header/Headers";
 import BackGroundBanner from "../../ReuseableComponents/Tools/BackGroundBanner";
-import Footer from "../Home/Navbars./Footer/Footer";
+import Footer from "../Home/Footer/Footer";
 import ContactForm from "./ContactForm";
 import GoogleMap from "./GoogleMap";
 

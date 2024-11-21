@@ -37,7 +37,7 @@ export default function MidNav() {
           <button onClick={favListHandler} className="hover:text-blue">
             <FaRegHeart />
           </button>
-          {favItemslist.length > 0 && (
+          {favItemslist?.length > 0 && (
             <span className="absolute right-[-10px] top-[-8px] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-green-500 text-[13px]">
               {favItemslist.length}
             </span>
@@ -49,7 +49,7 @@ export default function MidNav() {
           <button onClick={selectedItemsHandler} className="hover:text-blue">
             <LuShoppingBag />
           </button>
-          {selectedproductDetails.length > 0 && (
+          {selectedproductDetails?.length > 0 && (
             <span className="absolute right-[-10px] top-[-8px] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-green-500 text-[13px]">
               {selectedproductDetails.length}
             </span>

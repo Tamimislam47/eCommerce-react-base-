@@ -1,6 +1,6 @@
 import BackGroundBanner from "../../../ReuseableComponents/Tools/BackGroundBanner";
 import { useParams, useLocation } from "react-router-dom";
-import Footer from "../../Home/Navbars./Footer/Footer";
+import Footer from "../../Home/Footer/Footer";
 import Headers from "../../Home/Header/Headers";
 import React, { useState } from "react";
 import ItemContainer from "./ItemContainer";

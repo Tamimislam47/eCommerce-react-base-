@@ -2,7 +2,7 @@
   {
     "id": 1,
     "NewPrice": 299,
-    "OldPrice": 399,
+    "OldPrice": 299,
     "type": "Audio Device",
     "productName": "Wireless Earbuds",
     "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "NewPrice": 1299,
-    "OldPrice": 1499,
+    "OldPrice": 1299,
     "type": "Laptop",
     "productName": "Ultrabook Pro",
     "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/5.webp",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "NewPrice": 399,
-    "OldPrice": 499,
+    "OldPrice": 399,
     "type": "Fitness Gadget",
     "productName": "Smart Watch Pro",
     "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/8.webp",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "NewPrice": 39,
-    "OldPrice": 59,
+    "OldPrice": 39,
     "type": "Stationery Gadget",
     "productName": "Smart Pen",
     "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",

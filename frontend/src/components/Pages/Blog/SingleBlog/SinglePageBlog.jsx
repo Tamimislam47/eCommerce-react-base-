@@ -1,6 +1,6 @@
 import React from "react";
 import Headers from "../../Home/Header/Headers";
-import Footer from "../../Home/Navbars./Footer/Footer";
+import Footer from "../../Home/Footer/Footer";
 import Loader from "../../../ReuseableComponents/Loader";
 import BackGroundBanner from "../../../ReuseableComponents/Tools/BackGroundBanner";
 import { useLocation } from "react-router-dom";

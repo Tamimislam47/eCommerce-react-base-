@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import SliderCard from "./SliderCard";
 import Button from "../Button";
+import { Link } from "react-router-dom";
 
 export default function ActionSlider({ isOpen, closeSidebar, items, btn }) {
   const sliderRef = useRef(null);
@@ -29,17 +30,18 @@ export default function ActionSlider({ isOpen, closeSidebar, items, btn }) {
   return (
     <div
       ref={sliderRef}
-      className={`fixed left-0 top-0 z-10 h-full transform bg-gray-800 bg-opacity-90 text-white transition-transform duration-300 ${
+      className={`fixed left-0 top-0 z-10 flex h-screen transform flex-col bg-gray-800 bg-opacity-90 text-white transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } w-[30%]`}
+      } w-auto`}
     >
-      <div className="flex flex-col gap-4 p-3">
-        <Button
+      {/* Content Section */}
+      <div className="flex flex-grow flex-col gap-4 overflow-y-auto p-3">
+        <button
           onClick={closeSidebar}
           className="w-full bg-gray-700 px-4 py-2 text-lg hover:bg-gray-600"
         >
           Close &times;
-        </Button>
+        </button>
 
         <nav className="flex flex-col items-center space-y-2">
           {items.length > 0 ? (
@@ -51,6 +53,13 @@ export default function ActionSlider({ isOpen, closeSidebar, items, btn }) {
           )}
         </nav>
       </div>
+
+      {/* View Cart Button */}
+      <button className="w-full bg-black px-4 py-2 text-lg hover:bg-gray-600">
+        <Link to={"/mycart"} state={{ items }}>
+          View Cart
+        </Link>
+      </button>
     </div>
   );
 }
