@@ -7,13 +7,16 @@ import GridCartCards from "./GridCartCards/GridCartCards";
 import NavList from "./NavList";
 
 export default function MyCart() {
+  
   return (
-    <div className="flex w-full gap-5 flex-col items-center justify-center">
+    <div className="flex w-full flex-col items-center justify-center">
       <Header />
       <BackGroundBanner />
-      <CartItemTable />
-      <NavList />
-      <GridCartCards />
+      <div className="flex w-full gap-5 flex-col items-center justify-center">
+        <CartItemTable />
+        <NavList />
+        <GridCartCards />
+      </div>
       <Footer />
     </div>
   );

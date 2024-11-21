@@ -5,9 +5,12 @@ import MenubarSlider from "../../../../ReuseableComponents/SideSilder/MenubarSli
 import SearchBar from "../../../../ReuseableComponents/Tools/SearchBar";
 import ActionSlider from "../../../../ReuseableComponents/SideSilder/ActionSlider";
 import { productContext } from "../../../../../ContextApi/ProductProvider";
+import { useFetchData } from "../../../../../ContextApi/ProductDataProvider";
 
 export default function MidNav() {
   const { selectedproductDetails, favItemslist } = useContext(productContext);
+  const { data } = useFetchData();
+
   const [isShowHeart, setIsShowHeart] = useState(false);
   const [isShowShopping, setIsShowShopping] = useState(false);
 
@@ -27,7 +30,7 @@ export default function MidNav() {
 
       {/* Search Bar */}
       <div className="hidden w-[40%] sm:block">
-        <SearchBar />
+        <SearchBar data={data} />
       </div>
 
       {/* Icons Section */}

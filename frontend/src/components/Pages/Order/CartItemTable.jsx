@@ -7,18 +7,23 @@ export default function CartItemTable() {
   const [totals, setTotals] = useState({});
 
   // Callback to update the subtotal for each item
-  const onTotalPrice = useCallback((id, newSubtotal) => {
-    setTotals((prevTotals) => ({
-      ...prevTotals,
-      [id]: newSubtotal,
-    }));
-  }, []);
+  const onTotalPrice = useCallback(
+    (id, newSubtotal) => {
+      setTotals((prevTotals) => ({
+        ...prevTotals,
+        [id]: newSubtotal,
+      }));
+    },
+    [],
+  );
 
   // Calculate the total price by summing all subtotals
   const totalPrice = Object.values(totals).reduce(
     (acc, subtotal) => acc + subtotal,
     0,
   );
+
+  
 
   return (
     <div className="mx-auto w-full overflow-x-auto sm:w-[80%] lg:w-[70%]">
