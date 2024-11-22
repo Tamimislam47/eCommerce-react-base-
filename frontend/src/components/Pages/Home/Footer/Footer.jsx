@@ -19,27 +19,25 @@ export default function Footer() {
                   templ incididunt ut labore
                 </p>
               </li>
-              {/* //*icons */}
-              <li className="icons mt-3 flex gap-3 sm:text-2xl">
+              <div className="icons mt-3 flex gap-3 sm:text-2xl">
                 <li className="cursor-pointer hover:text-blue">
                   <FaFacebook />
                 </li>
                 <li className="cursor-pointer hover:text-blue">
-                  <FaTwitter />{" "}
+                  <FaTwitter />
                 </li>
                 <li className="cursor-pointer hover:text-blue">
                   <FaInstagramSquare />
                 </li>
-              </li>
+              </div>
             </ul>
           </div>
 
-          {/* //*Services */}
+          {/* Services */}
           <div className="flex h-[55%] w-full flex-col gap-2 lg:items-center lg:justify-around">
             <ul>
               <h1 className="text-2xl font-semibold sm:text-4xl">Services</h1>
               <li>My Account</li>
-              {/* //*icons */}
               <li>Contact</li>
               <li>Shopping cart</li>
               <li>Shop</li>
@@ -47,7 +45,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* //*My-Account */}
+          {/* My-Account */}
           <div className="flex h-[55%] w-full flex-col gap-2 lg:items-center lg:justify-around">
             <ul>
               <h1 className="text-2xl font-semibold sm:text-4xl">My Account</h1>
@@ -59,7 +57,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* //*Contact Info */}
+          {/* Contact Info */}
           <div className="flex h-[55%] w-full flex-col gap-2 lg:items-center lg:justify-around">
             <ul>
               <h1 className="text-2xl font-semibold sm:text-4xl">
@@ -80,3 +78,4 @@ export default function Footer() {
     </div>
   );
 }
+

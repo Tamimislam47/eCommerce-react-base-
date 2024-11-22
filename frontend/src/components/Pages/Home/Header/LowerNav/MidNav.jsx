@@ -48,10 +48,11 @@ export default function MidNav() {
         </span>
 
         {/* Shopping Bag Icon */}
-        <span className="relative flex items-center hover:cursor-pointer">
-          <button onClick={selectedItemsHandler} className="hover:text-blue">
-            <LuShoppingBag />
+        <span className="relative flex h-full items-center hover:cursor-pointer">
+          <button className="h-full hover:text-blue">
+            <MenubarSlider />
           </button>
+
           {selectedproductDetails?.length > 0 && (
             <span className="absolute right-[-10px] top-[-8px] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-green-500 text-[13px]">
               {selectedproductDetails.length}
@@ -60,10 +61,11 @@ export default function MidNav() {
         </span>
 
         {/* Menu Icon */}
+        {/* Menu Icon */}
         <span className="relative flex h-full items-center hover:cursor-pointer">
-          <button className="h-full hover:text-blue">
+          <div className="h-full hover:text-blue">
             <MenubarSlider />
-          </button>
+          </div>
         </span>
       </div>
 

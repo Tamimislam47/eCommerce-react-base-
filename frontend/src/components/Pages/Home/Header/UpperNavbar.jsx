@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useAuthProvider } from "../../../../ContextApi/AuthProvider";
 
 export default function UpperNavbar() {
-  const { user, logOut } = useAuthProvider();
+  const { user, signout } = useAuthProvider();
 
   return (
     <nav className="h-[54px] w-full sm:w-[80%] lg:w-[70%]">
@@ -28,13 +28,20 @@ export default function UpperNavbar() {
               <p>
                 {user?.email ? (
                   <>
-                    <Link to={"/signin"}>signout</Link>
+                    <button onClick={signout}>
+                      <Link to={"/signin"}>signout</Link>
+                    </button>
                   </>
                 ) : (
                   <>
                     <span>
-                      <Link to={"/signin"}>signin</Link>/
-                      <Link to={"/signup"}>signup</Link>
+                      <Link className="text-white" to={"/signin"}>
+                        signin
+                      </Link>
+                      /
+                      <Link className="text-white" to={"/signup"}>
+                        signup
+                      </Link>
                     </span>
                   </>
                 )}

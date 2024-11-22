@@ -59,12 +59,28 @@ export default function AuthProvider({ children }) {
     };
   }, []);
 
+  const errorMessage = (error) => {
+    switch (error.code) {
+      case "auth/invalid-credential":
+        return "Invalid Credential";
+      case "auth/email-already-in-use":
+        return "Email is already in use.";
+      case "auth/admin-restricted-operation":
+        return "Admin restricted operation.";
+      case "auth/user-not-found":
+        return "No account found with this email.";
+      default:
+        return "An unexpected error occurred. Please try again.";
+    }
+  };
+
   const value = {
     user,
     loading,
     signupWithEmailAndPassword,
     signinWithEmailAndPassword,
     signout,
+    errorMessage,
   };
   return (
     <AuthProviderContext.Provider value={value}>

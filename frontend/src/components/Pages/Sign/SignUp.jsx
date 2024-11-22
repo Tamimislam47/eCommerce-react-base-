@@ -3,10 +3,13 @@ import { useAuthProvider } from "../../../ContextApi/AuthProvider";
 import FormController from "../../../Controllers/FormController";
 import Button from "../../ReuseableComponents/Button";
 import Form from "../../ReuseableComponents/Form";
+import Swal from "sweetalert2";
+
 import Input from "../../ReuseableComponents/Input";
+
 export default function SignUp() {
   const { handleSubmit } = FormController();
-  const { signupWithEmailAndPassword } = useAuthProvider();
+  const { signupWithEmailAndPassword, errorMessage } = useAuthProvider();
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -16,57 +19,85 @@ export default function SignUp() {
     if (formData && formData.email && formData.password) {
       try {
         await signupWithEmailAndPassword(formData.email, formData.password);
-        console.log("User signed up successfully!");
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Your account has been created successfully.",
+        });
       } catch (error) {
-        if (error.code === "auth/email-already-in-use") {
-          console.log("Error: Email already in use.");
-        } else if (error.code === "auth/admin-restricted-operation") {
-          console.log("Error: Admin restricted operation.");
-        } else {
-          console.log("Sign-up failed:", error.message);
-        }
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: errorMessage(error), // Display the error message
+        });
       }
     } else {
-      console.log("Error: Missing email or password.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Missing email or password.",
+      });
     }
   };
+
+
   return (
-    <div className="hero min-h-screen text-white dark:bg-slate-600">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">SignUp now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+    <div className="hero min-h-screen bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white">
+      <div className="hero-content flex-col gap-8 lg:flex-row-reverse">
+        {/* Intro Section */}
+        <div className="max-w-lg text-center lg:text-left">
+          <h1 className="mb-4 text-5xl font-bold">Sign up now!</h1>
+          <p className="text-lg">
+            Join us today to explore our exclusive features and manage your
+            tasks effortlessly. Take the first step towards a productive
+            journey.
           </p>
         </div>
-        <div className="card w-full max-w-sm shrink-0 bg-base-100 shadow-2xl">
-          <Form submitform={handleSignup}>
-            <Input
-              upperText="username"
-              type="username"
-              name="username"
-              placeholder="username"
-              className="input input-bordered"
-            />
-            <Input
-              upperText="email"
-              type="email"
-              name="email"
-              placeholder="email"
-              className="input input-bordered"
-            />
-            <Input
-              upperText="password"
-              type="password"
-              name="password"
-              placeholder="password"
-              className="input input-bordered"
-            />
 
+        {/* Form Section */}
+        <div className="card w-full max-w-md bg-base-100 p-6 shadow-2xl">
+          <h2 className="mb-4 text-center text-2xl font-semibold">
+            Create an Account
+          </h2>
+          <Form submitform={handleSignup}>
+            {/* Username Input */}
+            <div className="form-group mb-4">
+              <Input
+                upperText="Username"
+                type="text"
+                name="username"
+                placeholder="Enter your username"
+                className="input input-bordered w-full"
+              />
+            </div>
+
+            {/* Email Input */}
+            <div className="form-group mb-4">
+              <Input
+                upperText="Email"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="input input-bordered w-full"
+              />
+            </div>
+
+            {/* Password Input */}
+            <div className="form-group mb-4">
+              <Input
+                upperText="Password"
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                className="input input-bordered w-full"
+              />
+            </div>
+
+            {/* Submit Button */}
             <div className="form-control mt-6">
-              <Button className="btn bg-[#7480FF] text-black">Singup</Button>
+              <Button className="btn w-full bg-[#7480FF] text-black">
+                Sign up
+              </Button>
             </div>
           </Form>
         </div>

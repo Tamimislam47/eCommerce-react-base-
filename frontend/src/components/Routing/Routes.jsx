@@ -8,6 +8,7 @@ import Products from "../Pages/Shop/Products";
 import Signin from "../Pages/Sign/SignIn";
 import SignUp from "../Pages/Sign/SignUp";
 import MyCart from "../Pages/Order/MyCart";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import * as React from "react";
 import App from "../../App";
 
@@ -51,7 +52,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/mycart",
-    element: <MyCart></MyCart>,
+    element: (
+      <PrivateRoute>
+        <MyCart></MyCart>
+      </PrivateRoute>
+    ),
   },
 ]);
 

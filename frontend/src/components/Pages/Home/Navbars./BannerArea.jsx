@@ -20,7 +20,7 @@ export default function BannerArea() {
             <p>From $29.00</p>
             <Link
               to={"/products"}
-              className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl"
+              className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl text-white"
             >
               <FaArrowRight />
             </Link>
@@ -37,7 +37,7 @@ export default function BannerArea() {
           <p className="text-black sm:text-2xl">From $95.00</p>
           <Link
             to={"/products"}
-            className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl"
+            className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl text-white"
           >
             <FaArrowRight />
           </Link>
@@ -50,7 +50,7 @@ export default function BannerArea() {
           <p className="text-black sm:text-2xl">From $69.00</p>
           <Link
             to={"/products"}
-            className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl"
+            className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-blue p-4 text-xl text-white"
           >
             <FaArrowRight />
           </Link>

@@ -118,5 +118,41 @@
     "Categories": ["Home", "Smart Devices"],
     "Tags": ["air purifier", "smart", "home"],
     "productDetails": "Breathe cleaner air with this intelligent air purifier featuring advanced filters."
+  },
+  {
+    "id": 11,
+    "NewPrice": 799,
+    "OldPrice": 999,
+    "type": "Home Appliance",
+    "productName": "Smart Air Purifier",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "HOME-AP-010",
+    "Categories": ["Home", "Smart Devices"],
+    "Tags": ["air purifier", "smart", "home"],
+    "productDetails": "Breathe cleaner air with this intelligent air purifier featuring advanced filters."
+  },
+  {
+    "id": 12,
+    "NewPrice": 799,
+    "OldPrice": 999,
+    "type": "Home Appliance",
+    "productName": "Smart Air Purifier",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "HOME-AP-010",
+    "Categories": ["Home", "Smart Devices"],
+    "Tags": ["air purifier", "smart", "home"],
+    "productDetails": "Breathe cleaner air with this intelligent air purifier featuring advanced filters."
+  },
+  {
+    "id": 13,
+    "NewPrice": 799,
+    "OldPrice": 999,
+    "type": "Home Appliance",
+    "productName": "Smart Air Purifier",
+    "productImg": "https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp",
+    "SKU": "HOME-AP-010",
+    "Categories": ["Home", "Smart Devices"],
+    "Tags": ["air purifier", "smart", "home"],
+    "productDetails": "Breathe cleaner air with this intelligent air purifier featuring advanced filters."
   }
 ]

@@ -3,6 +3,7 @@ import ProductCard from "../../Home/Navbars./ProductsCard";
 import Loader from "../../../ReuseableComponents/Loader";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Pagination from "../../../ReuseableComponents/Pagination/PaginationDesign";
 
 export default function ProductGrid() {
   const { data, loading, error } = useFetchData();
@@ -14,6 +15,7 @@ export default function ProductGrid() {
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = data?.slice(firstPostIndex, lastPostIndex);
+  console.log(currentPosts);
 
   return (
     <>
@@ -26,15 +28,21 @@ export default function ProductGrid() {
           <p>Something went wrong: {error.message}</p>
         </div>
       ) : (
-        <>
+        <div className="flex w-full flex-col items-center justify-center">
           <div className="grid grid-cols-1 gap-3 sm:w-[80%] sm:grid-cols-2 lg:w-[70%] xl:grid-cols-3">
-            {data?.map((item) => (
+            {currentPosts?.map((item) => (
               <Link to={`/products/${item.id}`} state={{ loading, item }}>
                 <ProductCard key={item.id} item={item} />
               </Link>
             ))}
           </div>
-        </>
+          <Pagination
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+            length={data?.length}
+            postsPerPage={postsPerPage}
+          />
+        </div>
       )}
     </>
   );
