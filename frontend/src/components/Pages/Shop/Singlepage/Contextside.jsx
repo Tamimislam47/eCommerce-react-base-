@@ -16,7 +16,6 @@ export default function Contextside(props) {
     setClicks(newClicks); // Update the clicks state
   };
 
-
   return (
     <div className="flex flex-col gap-5 p-5">
       <div>
@@ -36,9 +35,13 @@ export default function Contextside(props) {
         </p>
       </div>
 
-      <div className="flex justify-between p-3 pl-0 sm:w-[80%]">
+      <div className="flex w-full justify-between p-3 pl-0 sm:w-[80%]">
         {/* Pass the clicks and handler as props to IncDecButton */}
-        <IncDecButton clicks={clicks} onClicksChange={handleClicksChange} />
+        <IncDecButton
+          w={"w-[25%]"}
+          clicks={clicks}
+          onClicksChange={handleClicksChange}
+        />
 
         <Button className="w-[40%] bg-blue sm:pl-8 sm:pr-8">
           <h5>Add To Cart</h5>

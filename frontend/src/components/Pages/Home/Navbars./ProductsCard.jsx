@@ -20,7 +20,10 @@ export default function ProdectCards(props) {
           New
         </Button>
         <Button
-          className={`w-[30%] rounded-lg bg-black p-1 font-bold text-white ${NewPrice === OldPrice ? "hidden" : "block"} `}
+          style={{
+            backgroundColor: "black",
+          }}
+          className={`w-[30%] rounded-lg p-1 font-bold text-white ${NewPrice === OldPrice ? "hidden" : "block"} `}
         >
           {NewPrice === OldPrice
             ? `$ ${NewPrice}`

@@ -49,8 +49,11 @@ export default function MidNav() {
 
         {/* Shopping Bag Icon */}
         <span className="relative flex h-full items-center hover:cursor-pointer">
-          <button className="h-full hover:text-blue">
-            <MenubarSlider />
+          <button
+            onClick={selectedItemsHandler}
+            className="h-full hover:text-blue"
+          >
+            <LuShoppingBag />
           </button>
 
           {selectedproductDetails?.length > 0 && (
@@ -60,7 +63,6 @@ export default function MidNav() {
           )}
         </span>
 
-        {/* Menu Icon */}
         {/* Menu Icon */}
         <span className="relative flex h-full items-center hover:cursor-pointer">
           <div className="h-full hover:text-blue">

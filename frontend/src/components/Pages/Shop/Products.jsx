@@ -12,7 +12,6 @@ export default function Products() {
       <BackGroundBanner />
       <div className="flex w-full flex-col items-center justify-center gap-5">
         <AllProduct />
-
         <Footer />
       </div>
     </div>

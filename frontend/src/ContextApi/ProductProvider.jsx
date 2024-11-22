@@ -6,6 +6,7 @@ export default function ProductProvider({ children }) {
   const [selectedproductDetails, setselectedproductDetails] = useState([]);
   const [favItemslist, setfavItemslist] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [searchQuery, setSearchQuery] = useState([]);
 
   const addProduct = (newProduct) => {
     setselectedproductDetails((prevDetails) => [...prevDetails, newProduct]);
@@ -27,6 +28,14 @@ export default function ProductProvider({ children }) {
     });
   };
 
+  const filterData = (data, searching) => {
+    const filter = data?.filter((item) =>
+      item.productName.toLowerCase().includes(searching.toLowerCase()),
+    );
+    setSearchQuery(filter);
+    return filter;
+  };
+
   const value = {
     selectedproductDetails,
     setselectedproductDetails,
@@ -37,6 +46,8 @@ export default function ProductProvider({ children }) {
     deleteProduct,
     deleteFavItem,
     favItemslist,
+    filterData,
+    searchQuery,
   };
 
   return (

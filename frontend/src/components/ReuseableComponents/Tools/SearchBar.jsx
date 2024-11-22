@@ -1,19 +1,26 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { productContext } from "../../../ContextApi/ProductProvider";
 
 export default function SearchBar({ data }) {
+  const { filterData } = React.useContext(productContext);
+
+  const [getfilteredData, setgetfilteredData] = useState(null);
   const [searching, setSearching] = useState("");
 
-  // Filter data only when there's a search query
-  const filteredData = data?.filter((item) =>
-    item.productName.toLowerCase().includes(searching.toLowerCase()),
-  );
+  const filterHandler = (e) => {
+    setSearching(e.target.value);
+    const filter = filterData(data, e.target.value);
+    setgetfilteredData(filter);
+  };
 
+  
   return (
-    <div>
+    <div className="relative">
       {/* Input Field */}
       <label className="input input-bordered flex items-center gap-2">
         <input
-          onChange={(e) => setSearching(e.target.value)}
+          onChange={filterHandler}
           value={searching}
           type="text"
           className="grow"
@@ -35,14 +42,16 @@ export default function SearchBar({ data }) {
 
       {/* Display search results only if searching */}
       {searching && (
-        <ul className="search-results max-h-48 overflow-auto rounded-lg border border-gray-200 bg-white">
-          {filteredData?.length > 0 ? (
-            filteredData.map((item) => (
+        <ul className="search-results absolute z-50 max-h-48 w-full overflow-auto rounded-lg border border-gray-200 bg-white text-black">
+          {getfilteredData?.length > 0 ? (
+            getfilteredData.map((item) => (
               <li
                 key={item.id}
                 className="cursor-pointer p-2 hover:bg-gray-100"
               >
-                {item.productName}
+                <Link to={`/products/${item.id}`} state={{ item }}>
+                  {item.productName}
+                </Link>
               </li>
             ))
           ) : (

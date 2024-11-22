@@ -29,7 +29,9 @@ export default function UpperNavbar() {
                 {user?.email ? (
                   <>
                     <button onClick={signout}>
-                      <Link to={"/signin"}>signout</Link>
+                      <Link to={"/signin"} className="text-white">
+                        signout
+                      </Link>
                     </button>
                   </>
                 ) : (

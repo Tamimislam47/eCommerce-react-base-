@@ -11,7 +11,7 @@ import React from "react";
 
 export default function Homepage() {
   return (
-    <div className="flex w-full flex-col items-center">
+    <div className="flex  flex-col items-center">
       <Headers />
       <Banner />
       <BannerArea />

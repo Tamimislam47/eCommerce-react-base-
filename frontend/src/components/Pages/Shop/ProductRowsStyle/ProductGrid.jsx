@@ -1,4 +1,5 @@
 import { useFetchData } from "../../../../ContextApi/ProductDataProvider";
+import { productContext } from "../../../../ContextApi/ProductProvider";
 import ProductCard from "../../Home/Navbars./ProductsCard";
 import Loader from "../../../ReuseableComponents/Loader";
 import React, { useState } from "react";
@@ -7,6 +8,7 @@ import Pagination from "../../../ReuseableComponents/Pagination/PaginationDesign
 
 export default function ProductGrid() {
   const { data, loading, error } = useFetchData();
+  const { searchQuery } = React.useContext(productContext);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(9);
@@ -14,8 +16,7 @@ export default function ProductGrid() {
   //* pagination page change
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts = data?.slice(firstPostIndex, lastPostIndex);
-  console.log(currentPosts);
+  const currentPosts = searchQuery?.slice(firstPostIndex, lastPostIndex);
 
   return (
     <>
@@ -36,12 +37,14 @@ export default function ProductGrid() {
               </Link>
             ))}
           </div>
-          <Pagination
-            setCurrentPage={setCurrentPage}
-            currentPage={currentPage}
-            length={data?.length}
-            postsPerPage={postsPerPage}
-          />
+          {currentPosts.length >= 9 && (
+            <Pagination
+              setCurrentPage={setCurrentPage}
+              currentPage={currentPage}
+              length={data?.length}
+              postsPerPage={postsPerPage}
+            />
+          )}
         </div>
       )}
     </>
