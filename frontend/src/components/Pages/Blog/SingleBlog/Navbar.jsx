@@ -6,18 +6,21 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <nav className="flex w-full items-center justify-center gap-5 border-2 border-l-0 border-r-0 border-gray-300 p-3 text-[16px]">
-      <div className="flex w-1/2 justify-start gap-2">
-        <p>Tages:</p>
-        <ul className="flex gap-1">
+    <nav className="flex w-full items-center justify-between border-y-2 border-gray-300 pb-2 pt-2 text-[16px]">
+      {/* Tags Section */}
+      <div className="flex w-1/2 items-center gap-3">
+        <ul className="flex items-center gap-2">
+          <p className="font-semibold">Tags:</p>
           <li className="hover:cursor-pointer hover:text-blue">Mobile,</li>
           <li className="hover:cursor-pointer hover:text-blue">Laptop,</li>
-          <li className="hover:cursor-pointer hover:text-blue">Smart Tv,</li>
+          <li className="hover:cursor-pointer hover:text-blue">Smart TV</li>
         </ul>
       </div>
-      <div className="flex w-1/2 justify-end gap-2">
-        <p>Share:</p>
+
+      {/* Share Section */}
+      <div className="flex w-1/2 items-center justify-end gap-3">
         <ul className="flex items-center gap-3">
+          <p className="font-semibold">Share:</p>
           <li className="hover:cursor-pointer hover:text-blue">
             <FaFacebookF />
           </li>

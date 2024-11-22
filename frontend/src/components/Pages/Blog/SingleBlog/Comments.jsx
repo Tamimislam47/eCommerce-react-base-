@@ -26,9 +26,15 @@ export default function Comments() {
   return (
     <div className="flex w-full justify-center p-3 sm:w-[80%] lg:w-[70%]">
       <div className="flex w-full flex-col gap-10 sm:w-[90%] xl:w-[65%]">
-        <Navbar />
+        <div className="hidden h-full w-full sm:block">
+          <Navbar />
+        </div>
         <div className="grid w-full gap-5">
-          <p className="text-4xl">{`Comments (${getCommentData.length})`} </p>
+          <p className="!important text-[12px] sm:text-2xl">
+            {`Comments (${getCommentData.length})`}
+          </p>
+         
+
           {slideCommentData.map((data, index) => (
             <div
               key={data.id}

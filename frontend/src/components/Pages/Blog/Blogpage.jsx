@@ -43,17 +43,17 @@ export default function Blogpage() {
       ) : (
         <>
           <Headers />
-          <BackGroundBanner />
-          <RowsBlogData blogData={currentPosts} />
-          <div className="flex w-full justify-end pr-20">
+          <div className="flex w-full flex-col items-center justify-center gap-4">
+            <BackGroundBanner />
+            <RowsBlogData blogData={currentPosts} />
             <Pagination
               setCurrentPage={setCurrentPage}
               currentPage={currentPage}
               length={blogData.length}
               postsPerPage={postsPerPage}
             />
+            <Footer />
           </div>
-          <Footer />
         </>
       )}
     </div>

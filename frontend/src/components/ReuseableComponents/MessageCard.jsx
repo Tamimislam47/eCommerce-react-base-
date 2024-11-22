@@ -1,21 +1,19 @@
 import React from "react";
-import member1 from "@images/member1.webp";
 import { useNavigate } from "react-router-dom";
 
-
 export default function MessageCard({ msgData }) {
-      const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const { userImg, userComment, Date, userName } = msgData;
+  const { userImg, userComment,  userName } = msgData;
 
   return (
-    <div className="card card-side w-[90%]  flex items-center bg-base-100 shadow-xl">
-      <div className="h-full w- ">
-        <figure className="h-full w-full p-2">
+    <div className="card card-side flex w-[90%] items-start shadow-xl">
+      <div className="h-full w-[20%] pt-7">
+        <figure className="w-full p-2">
           <img
-            src={userImg || member1}
+            src={userImg}
             alt="User"
-            className="h-full max-h-32 w-full rounded-xl bg-green-300 object-cover" // Set max-height
+            className="w-full rounded-xl object-cover sm:h-[80px]" // Set max-height
           />
         </figure>
       </div>
@@ -23,7 +21,9 @@ export default function MessageCard({ msgData }) {
         <h2 className="card-title">{userName}</h2>
         <p>{userComment}</p>
         <div className="card-actions justify-end">
-          <button onClick={() => navigate('')}  className="btn btn-primary">Reply</button>
+          <button onClick={() => navigate("")} className="btn btn-primary">
+            Reply
+          </button>
         </div>
       </div>
     </div>
