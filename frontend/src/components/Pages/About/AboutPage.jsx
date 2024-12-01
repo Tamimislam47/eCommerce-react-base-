@@ -1,7 +1,7 @@
 import React from "react";
 // ClientFeedbacks Blog Footer ;
 import Headers from "../Home/Header/Headers";
-import ClientFeedback from "../Home/Navbars./ClientFeedback";
+import ClientFeedback from "../Home/ClientFeedback/ClientFeedback";
 import BlogCards from "../Home/Navbars./BlogCards/BlogCard";
 import BackGroundBanner from "../../ReuseableComponents/Tools/BackGroundBanner";
 import Footer from "../Home/Footer/Footer";
