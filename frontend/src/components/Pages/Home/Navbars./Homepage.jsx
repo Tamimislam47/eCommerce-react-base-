@@ -16,8 +16,8 @@ export default function Homepage() {
       <Banner />
       <BannerArea />
       <ProductsRow />
-      <div className="flex flex-col items-center  gap-5">
-        <SmartFashion />
+      <SmartFashion />
+      <div className="flex flex-col items-center gap-[3rem]">
         <FeaturedOffers />
         <ClientFeedback />
       </div>

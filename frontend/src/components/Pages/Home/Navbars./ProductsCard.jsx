@@ -15,7 +15,7 @@ export default function ProdectCards(props) {
   return (
     <div className="card relative h-full w-full border-[3px] border-[#E1E1E1] p-3">
       {/* Sales Badges */}
-      <div className="flex flex-col gap-2">
+      <div className="flex shrink-0 flex-col gap-2">
         <Button className="w-[30%] rounded-lg bg-blue p-1 font-bold text-white">
           New
         </Button>
@@ -37,7 +37,7 @@ export default function ProdectCards(props) {
       </div>
 
       {/* Text and Buttons */}
-      <div className="text flex h-[40%] flex-col items-center justify-around gap-2 p-3">
+      <div className="text flex flex-col items-center justify-around gap-2 p-3">
         <p className="text-[#707070]">Accessories</p>
         <p className="font-bold">{productName}</p>
         <p className="text-[#707070]">

@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import CustomerRating from "../../../ReuseableComponents/Tools/MiddiumCustomerRating";
 import IncDecButton from "../../../ReuseableComponents/Tools/IncDecButton";
-import Button from "../../../ReuseableComponents/Button";
 import { FaArrowsRotate } from "react-icons/fa6";
 import { LuShoppingBag } from "react-icons/lu";
 import TabContent from "../../../ReuseableComponents/TabcontentFolder/TabContent";
+import { productContext } from "../../../../ContextApi/ProductProvider";
 
 export default function Contextside(props) {
-  const [clicks, setClicks] = useState(0); // Initialize clicks with 0
-
+  //*contextapi
+  const { addProduct, favItemslist } = useContext(productContext);
+  //*props
   const { id, NewPrice, OldPrice, productName, SKU, Tags, productDetails } =
     props.itemDetails;
 
+  //*state
+  const [clicks, setClicks] = useState(0);
+
   const handleClicksChange = (newClicks) => {
-    setClicks(newClicks); // Update the clicks state
+    setClicks(newClicks);
   };
 
   return (
@@ -35,23 +39,24 @@ export default function Contextside(props) {
         </p>
       </div>
 
-      <div className="flex w-full justify-between p-3 pl-0 sm:w-[80%]">
+      <div className="flex w-full justify-between gap-3 p-3 pl-0 sm:w-[80%]">
         {/* Pass the clicks and handler as props to IncDecButton */}
-        <IncDecButton
-          w={"w-[25%]"}
-          clicks={clicks}
-          onClicksChange={handleClicksChange}
-        />
+        <div className="flex w-[100px] items-center justify-center">
+          <IncDecButton clicks={clicks} onClicksChange={handleClicksChange} />
+        </div>
 
-        <Button className="w-[40%] bg-blue sm:pl-8 sm:pr-8">
-          <h5>Add To Cart</h5>
-        </Button>
-        <Button className="bg-gray-500 p-3 hover:bg-blue">
+        <button
+          onClick={() => addProduct(props.itemDetails)}
+          className="w-[40%] bg-blue text-white sm:pl-8 sm:pr-8"
+        >
+          Add To Cart
+        </button>
+        <button className="bg-gray-500 p-3 text-white hover:bg-blue">
           <LuShoppingBag />
-        </Button>
-        <Button className="bg-gray-500 p-3 hover:bg-blue">
+        </button>
+        <button className="bg-gray-500 p-3 text-white hover:bg-blue">
           <FaArrowsRotate />
-        </Button>
+        </button>
       </div>
 
       <TabContent />

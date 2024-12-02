@@ -14,7 +14,7 @@ export default function SearchBar({ data }) {
     setgetfilteredData(filter);
   };
 
-  
+
   return (
     <div className="relative">
       {/* Input Field */}

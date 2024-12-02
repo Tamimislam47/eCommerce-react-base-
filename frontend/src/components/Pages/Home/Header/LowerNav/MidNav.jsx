@@ -7,7 +7,7 @@ import ActionSlider from "../../../../ReuseableComponents/SideSilder/ActionSlide
 import { productContext } from "../../../../../ContextApi/ProductProvider";
 import { useFetchData } from "../../../../../ContextApi/ProductDataProvider";
 
-export default function MidNav() {
+export default function MidNav({ blogData, chk }) {
   const { selectedproductDetails, favItemslist } = useContext(productContext);
   const { data } = useFetchData();
 
@@ -30,7 +30,7 @@ export default function MidNav() {
 
       {/* Search Bar */}
       <div className="hidden w-[40%] sm:block">
-        <SearchBar data={data} />
+        <SearchBar data={chk ? blogData : data} />
       </div>
 
       {/* Icons Section */}

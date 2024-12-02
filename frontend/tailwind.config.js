@@ -9,6 +9,9 @@ export default {
       colors: {
         blue: "#266BF9",
       },
+      gridTemplateColumns: {
+        autoFitCol: "repeat(auto-fit, minmax(300px, 1fr))", // Adjust `minmax` and `1fr` as needed
+      },
     },
   },
   plugins: [require("daisyui")],

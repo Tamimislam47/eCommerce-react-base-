@@ -21,8 +21,8 @@ export default function ProductsRow() {
             Featured
           </Button>
         </nav>
-        <div className="productItems grid min-h-screen w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {data?.map((item) => (
+        <div className="productItems grid-cols-autoFitCol grid w-full grid-rows-3 gap-5">
+          {data?.slice(0, 12).map((item) => (
             <Link
               to={`/products/${item?.id}`}
               state={{ loading, item }}

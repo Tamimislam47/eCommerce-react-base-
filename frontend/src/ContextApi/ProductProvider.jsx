@@ -27,12 +27,14 @@ export default function ProductProvider({ children }) {
       return prevProdect.filter((product) => product.id !== productId);
     });
   };
-
   const filterData = (data, searching) => {
-    const filter = data?.filter((item) =>
-      item.productName.toLowerCase().includes(searching.toLowerCase()),
-    );
-    setSearchQuery(filter);
+    const filter = data?.filter((item) => {
+      const getData = item.productName || item.title; 
+      
+      return getData?.toLowerCase().includes(searching.toLowerCase()); // Perform case-insensitive match
+    });
+
+    setSearchQuery(filter); // Update the search query state
     return filter;
   };
 

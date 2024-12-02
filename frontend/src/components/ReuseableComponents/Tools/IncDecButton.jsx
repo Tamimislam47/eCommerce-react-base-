@@ -14,11 +14,9 @@ class IncDecButton extends Component {
   };
 
   render() {
-    const { w } = this.props;
-
     return (
       <div
-        className={`flex w-full items-center justify-center gap-3 border-2 border-black lg:w-[50%] ${w} `}
+        className={`flex w-full items-center justify-center gap-3 border-2 border-black `}
       >
         <button
           className="w-[50%] border-2 font-bold"
